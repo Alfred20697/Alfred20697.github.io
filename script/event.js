@@ -1,0 +1,1 @@
+let myEvent2 = [{"Date": "8/5/2018","Title": "Effective Interpersonal Skills - Grp 2","Target": "All Levels","Seat": "2","TrainID": "12"},{"Date": "15/5/2018","Title": "Customer Service Skills","Target": "Execs level","Seat": "3","TrainID": "14"},{"Date": "4/6/2018","Title": "Lunch & Learn Talk - Cyber Security and Safety","Target": "HQ Staff","Seat": "50","TrainID": "28"}];
