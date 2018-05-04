@@ -48,18 +48,21 @@
         </div>
     </nav>
 
+    <br>
+
     <div class="container">
         <div class="row">
             <div id="content">
                 <div class="gshowoff" id="gshowoff_wrapper">
+                    <h2>My Github Repositories</h2>
+                    <br>
                     <ul class="list-group"></ul>
                 </div>
             </div>
         </div>
         <br><br>
         <div class="row" style="font-style: italic;">
-            Credits to
-            <a href="https://github.com/prevwong/prevwong.github.io">(click here)</a>
+            <p>Credits to <a href="https://github.com/prevwong/prevwong.github.io">(click here)</a></p>
         </div>
         <hr>
     </div>
@@ -123,17 +126,18 @@
                 var watchers = current_repo["watchers"]
                 var is_fork = current_repo["fork"]
                 var forks = current_repo["forks"]
+                var homepage = current_repo["homepage"]
                 var classes = ""
                 if (stars > 15) {
                     classes += "top "
                 }
-                output += '<li class="' + classes + ' list-group-item"><a target="__blank" href="' + url + '"><div class="repo_content">'
+                output += '<li class="' + classes + ' list-group-item"><div class="repo_content"><a target="__blank" href="' + url + '">'
                 if (is_fork == true) {
                     output += '<i class="fa fa-code-fork fork_repo"></i>'
                 }
                 output += '<h3>' + title + '</h3></a>'
                 if (language !== null || stars !== 0 || watchers !== 0) {
-                    output += '<div class = "repos_info">'
+                    output += ''
                     if (language !== null) {
                         output += '<span>' + language + '</span>'
                     }
@@ -146,10 +150,13 @@
                     if (forks !== 0) {
                         output += '<span><i class="fas fa-code-branch"></i>' + forks + '</span>'
                     }
-                    output += '</div>'
+                    output += ''
                 }
                 if (description !== null) {
                     output += '<p>' + description + '</p>'
+                }
+                if (homepage !== null) {
+                    output += '<p style="font-style: italic;">Click <a href="' + homepage + '">' + 'here</a> for the hosted link.</p>'
                 }
                 output += '</div></li>'
             }
