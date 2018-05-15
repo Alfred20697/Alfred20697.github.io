@@ -40,6 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="resume.html">Resume</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips/tips-main.html">Tips</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,44 +54,47 @@
         <!-- Example row of columns -->
         <h2>About</h2>
 
-        <p>
-            My name is Alfred Loo. 
-            I am a second year Computer Science student @ <a href="http://www.mmu.edu.my/" target="_blank">Multimedia University</a>, Malaysia. 
-            Currently I am working as IT Intern @ <a href="http://www.ioigroup.com/" target="_blank">IOI Group</a>. 
-            My hometown is in Melaka, where I live with my grandmother, mother and brother. 
-            I am the youngest in my family.
-            My mother used to work as hotel manager, but she had retired 3 years ago. 
-        </p>
-        <p>
-            During high school, I am very interested in Mathematics and Physics, and Mathematics had been my ace subject since I was grade 5.
-            I liked the feeling of satisfaction after solving problems very much.
-            After some great effort, I had a good result for my SPM.
-            Then, I started to wonder which course should I take.
-            I had consulted with one of my teacher.
-            My teacher had suggested me to take software engineering course, which I had very less knowledge about at that time.
-            I quickly made a few research on the course, and decided to study at Multimedia University.
-        </p>
-        <p>
-            At the beginning of the journey, I was inexperienced. There are fundamentals to learn and skills to master. 
-            Fortunately, with the help of my friends, we become better by learning from each other.
-            Programming, databases, operating systems, algorithms, etc., these are the terms you won't hear that much during high school (at least for me).
-            After learning them, I had realized their importance in our daily life.
-        </p>
-        <p>
-            Since then, I keep improving my skills and knowledge. I had created some simple application, including console application, desktop application and web application.
-            Among those, I am mostly interested in web and mobile application development.
-            Web and mobile applications have rapidly become part of our life in recent years.  
-            My current focus is on education and health industry. 
-            These two industries are mostly in need of some innovation. 
-            I have then started to brainstorm some ideas to improve both industries.
-        </p>
-        <p>
-            Last but not least, my ultimate aim is to realize my ideas and help serve the society, who gives a lot to me, in years to come.
-        </p>
-        <p>
-            <em>Want to work together? Interested in what I'm doing? I’d love to hear from you.</em> 
-            Send me an email @ <a href="mailto:alfred97620@gmail.com">alfred97620@gmail.com</a>
-        </p>
+        <details id="details">
+            <summary><em><span id="summary" class="not-clicked">Click to see more</span></em></summary>
+            <p>
+                My name is Alfred Loo. 
+                I am a second year Computer Science student @ <a href="http://www.mmu.edu.my/" target="_blank">Multimedia University</a>, Malaysia. 
+                Currently I am working as IT Intern @ <a href="http://www.ioigroup.com/" target="_blank">IOI Group</a>. 
+                My hometown is in Melaka, where I live with my grandmother, mother and brother. 
+                I am the youngest in my family.
+                My mother used to work as hotel manager, but she had retired 3 years ago. 
+            </p>
+            <p>
+                During high school, I am very interested in Mathematics and Physics, and Mathematics had been my ace subject since I was grade 5.
+                I liked the feeling of satisfaction after solving problems very much.
+                After some great effort, I had a good result for my SPM.
+                Then, I started to wonder which course should I take.
+                I had consulted with one of my teacher.
+                My teacher had suggested me to take software engineering course, which I had very less knowledge about at that time.
+                I quickly made a few research on the course, and decided to study at Multimedia University.
+            </p>
+            <p>
+                At the beginning of the journey, I was inexperienced. There are fundamentals to learn and skills to master. 
+                Fortunately, with the help of my friends, we become better by learning from each other.
+                Programming, databases, operating systems, algorithms, etc., these are the terms you won't hear that much during high school (at least for me).
+                After learning them, I had realized their importance in our daily life.
+            </p>
+            <p>
+                Since then, I keep improving my skills and knowledge. I had created some simple application, including console application, desktop application and web application.
+                Among those, I am mostly interested in web and mobile application development.
+                Web and mobile applications have rapidly become part of our life in recent years.  
+                My current focus is on education and health industry. 
+                These two industries are mostly in need of some innovation. 
+                I have then started to brainstorm some ideas to improve both industries.
+            </p>
+            <p>
+                Last but not least, my ultimate aim is to realize my ideas and help serve the society, who gives a lot to me, in years to come.
+            </p>
+            <p>
+                <em>Want to work together? Interested in what I'm doing? I’d love to hear from you.</em> 
+                Send me an email @ <a href="mailto:alfred97620@gmail.com">alfred97620@gmail.com</a>
+            </p>
+        </details>
 
         <br>
         <hr>
@@ -116,7 +122,7 @@
             <i class="fas fa-at fa-lg w3-hover-opacity"></i>
         </a>
         <p></p>
-        <p>&copy; Alfred Loo 2018</p>
+        <p>&copy; Alfred Loo <span id="year"></span></p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -125,6 +131,30 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <script>
+        let date = new Date();
+        let year = date.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#details").click(function(){
+                if($("#summary").hasClass("not-clicked")){
+                    $("#summary").text("Click to see less");
+                    $("#summary").addClass("clicked");
+                    $("#summary").removeClass("not-clicked");
+                }
+                else if($("#summary").hasClass("clicked")){
+                    $("#summary").text("Click to see more");
+                    $("#summary").addClass("not-clicked");
+                    $("#summary").removeClass("clicked");
+                }
+                else{
+                    alert("Something wrong at summary");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

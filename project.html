@@ -40,6 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="resume.html">Resume</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips/tips-main.html">Tips</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -88,7 +91,7 @@
             <i class="fas fa-at fa-lg w3-hover-opacity"></i>
         </a>
         <p></p>
-        <p>&copy; Alfred Loo 2018</p>
+        <p>&copy; Alfred Loo <span id="year"></span></p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -168,6 +171,12 @@
 
     <script src="https://api.github.com/users/alfred20697/repos?callback=list" type="text/javascript"></script>
     <script src="https://api.github.com/users/alfred20697?callback=header" type="text/javascript"></script>
+
+    <script>
+        let date = new Date();
+        let year = date.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
 </body>
 
 </html>
