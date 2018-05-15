@@ -17,21 +17,71 @@
 </head>
 
 <body>
-    <div id="header">
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Alfred</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Project</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="resume.html">Resume
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tips/tips-main.html">Tips</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    </div>
+    <br>
 
     <div class="container">
         <!-- Example row of columns -->
         <h2>Resume</h2>
+        
         <br>
         <hr>
     </div>
     <!-- /container -->
 
-    <div id="footer">
-
-    </div>
+    <footer class="container">
+        <p>Find me on social media.</p>
+        <a class="footer-link" href="https://www.facebook.com/Alfred97620" target="_blank">
+            <i class="fab fa-facebook-square fa-lg w3-hover-opacity"></i>
+        </a>
+        <a class="footer-link" href="https://github.com/Alfred20697" target="_blank">
+            <i class="fab fa-github fa-lg w3-hover-opacity"></i>
+        </a>
+        <a class="footer-link" href="https://www.instagram.com/alfred20697/?hl=en" target="_blank">
+            <i class="fab fa-instagram fa-lg w3-hover-opacity"></i>
+        </a>
+        <a class="footer-link" href="https://twitter.com/Alfred20697" target="_blank">
+            <i class="fab fa-twitter fa-lg w3-hover-opacity"></i>
+        </a>
+        <a class="footer-link" href="https://www.linkedin.com/in/alfred-l-3021aa8b/" target="_blank">
+            <i class="fab fa-linkedin fa-lg w3-hover-opacity"></i>
+        </a>
+        <a class="footer-link" href="mailto:alfred97620@gmail.com">
+            <i class="fas fa-at fa-lg w3-hover-opacity"></i>
+        </a>
+        <p></p>
+        <p>&copy; Alfred Loo <span id="year"></span></p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -39,26 +89,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#header").load("partials/header.html");
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $("#footer").load("partials/footer.html");
-        });
-    </script>
-
     <script>
         let date = new Date();
         let year = date.getFullYear();
         document.getElementById("year").innerHTML = year;
     </script>
-
 </body>
 
 </html>
