@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99015374-2"></script>
     <script>
@@ -63,7 +62,7 @@
     <div class="container">
         <div class="row">
             <div id="content">
-                <div class="gshowoff" id="gshowoff_wrapper">
+                <div class="repo" id="repo_wrapper">
                     <h2>My Github Repositories</h2>
                     <br>
                     <ul class="list-group"></ul>
@@ -72,11 +71,11 @@
         </div>
         <br>
         <br>
-        <div class="row" style="font-style: italic;">
+        <!-- <div class="row" style="font-style: italic;">
             <p>Credits to
                 <a href="https://github.com/prevwong/prevwong.github.io">(click here)</a>
             </p>
-        </div>
+        </div> -->
         <hr>
     </div>
 
@@ -101,7 +100,9 @@
             <i class="fas fa-at fa-lg w3-hover-opacity"></i>
         </a>
         <p></p>
-        <p>&copy; Alfred Loo <span id="year"></span></p>
+        <p>&copy; Alfred Loo
+            <span id="year"></span>
+        </p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -119,15 +120,9 @@
             var bio = user_data["bio"]
             var avatar_url = user_data['avatar_url']
             var html_url = user_data["html_url"]
-            // var avatar_elem = document.querySelector('.gshowoff header .avatar')
-            // var name_elem = document.querySelector('.gshowoff header .name')
-            // var profile_elem = document.getElementById('profile_link')
-            // avatar_elem.style.backgroundImage = "url('" + avatar_url + "')"
-            // name_elem.innerHTML = name
-            // profile_elem.href = html_url
         }
         function list(data) {
-            var reposList = document.getElementById('gshowoff_wrapper');
+            var reposList = document.getElementById('repo_wrapper');
             var output = ""
             var repos = data.data
             for (var key in repos) {
@@ -141,40 +136,36 @@
                 var is_fork = current_repo["fork"]
                 var forks = current_repo["forks"]
                 var homepage = current_repo["homepage"]
-                var classes = ""
-                if (stars > 15) {
-                    classes += "top "
-                }
-                output += '<li class="' + classes + ' list-group-item"><div class="repo_content"><a target="__blank" href="' + url + '">'
+                output += '<li class="list-group-item"><a target="__blank" href="' + url + '">'
                 if (is_fork == true) {
-                    output += '<i class="fa fa-code-fork fork_repo"></i>'
+                    output += '<i class="fas fa-code-branch fork_repo"></i>'
                 }
                 output += '<h3>' + title.toLowerCase() + '</h3></a>'
                 if (language !== null || stars !== 0 || watchers !== 0) {
                     output += ''
                     if (language !== null) {
-                        output += '<span>' + language + '</span>'
+                        output += '<span>' + language + '</span> '
                     }
                     if (stars !== 0) {
-                        output += '<span><i class="fas fa-star"></i>' + stars + '</span>'
+                        output += '<span><i class="fas fa-star"></i> ' + stars + '</span> '
                     }
                     if (watchers !== 0) {
-                        output += '<span><i class="fas fa-eye"></i>' + watchers + '</span>'
+                        output += '<span><i class="fas fa-eye"></i> ' + watchers + '</span> '
                     }
                     if (forks !== 0) {
-                        output += '<span><i class="fas fa-code-branch"></i>' + forks + '</span>'
+                        output += '<span><i class="fas fa-code-branch"></i> ' + forks + '</span> '
                     }
                     output += ''
                 }
                 if (description !== null) {
                     output += '<p>' + description + '</p>'
                 }
-                if (homepage !== "") {
+                if (homepage !== "" && homepage !== null) {
                     output += '<p style="font-style: italic;">Link: <a href="' + homepage + '">' + homepage + '</a></p>'
                 }
-                output += '</div></li>'
+                output += '</li>'
             }
-            document.querySelector('.gshowoff > ul').innerHTML = output
+            document.querySelector('.repo > ul').innerHTML = output
 
         }
     </script>
