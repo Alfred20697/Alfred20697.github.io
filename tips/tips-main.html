@@ -62,14 +62,55 @@
     <div class="container">
         <!-- Example row of columns -->
         <h2>Tips</h2>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <a href="https://www.facebook.com/Alfred97620">facebook</a>
-            </li>
-            <li class="list-group-item">Second item</li>
-            <li class="list-group-item">Third item</li>
-        </ul>
+
+        <h3>Resourcs</h3>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        React Native
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse">
+                    <div class="card-body">
+                        <a href="https://facebook.github.io/react-native/" target="_blank">React Native Official Site</a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://reactnavigation.org/" target="_blank">React Navigation (v2)</a>
+                    </div>
+                    <div class="card-body">
+                        <a href="http://www.reactnativeexpress.com/" target="_blank">React Native Express</a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://react-native-training.github.io/react-native-elements/" target="_blank">React Native Elements</a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://reactjs.org/" target="_blank">React</a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://redux.js.org/" target="_blank">Redux</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        ASP.NET
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse">
+                    <div class="card-body">
+                        TBC
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <br>
+
+        <h3>Articles</h3>
+
         <hr>
     </div>
     <!-- /container -->
@@ -109,7 +150,7 @@
     <script>
         let date = new Date();
         let year = date.getFullYear();
-        document.getElementById("year").innerHTML = year;
+        $("#year").text(year);
     </script>
 </body>
 
