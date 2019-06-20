@@ -1,7 +1,10 @@
-$primary-color: #003830;
-$secondary-color: #c98711;
+// $primary-color: #003830;
+// $secondary-color: #c98711;
+$primary-color: #0e2240;
+$secondary-color: #fec524;
+$tertiary-color: #8b2131;
 $show-home-image: true;
-$home-image: url(../img/bg3.png);
+$home-image: url(../img/background.jpg);
 $background-opacity: 0.5;
 
 @mixin easeOut {
