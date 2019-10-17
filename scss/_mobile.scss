@@ -86,6 +86,12 @@
     grid-template-columns: 1fr;
   }
 
+  .boxes {
+    div {
+      width: 100%;
+    }
+  }
+
   footer {
     text-align: center;
   }
