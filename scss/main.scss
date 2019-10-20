@@ -30,7 +30,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($tertiary-color, 2), 0.8);
   }
 
   &.sp-lg-heading {
@@ -85,7 +85,7 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "job1 job2 job3";
+    "job1 . .";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -104,18 +104,22 @@ main {
     grid-area: job1;
   }
 
-  .job2 {
-    grid-area: job2;
-  }
+  // .job2 {
+  //   grid-area: job2;
+  // }
 
-  .job3 {
-    grid-area: job3;
-  }
+  // .job3 {
+  //   grid-area: job3;
+  // }
 
   .job {
     background: lighten($primary-color, 3);
     padding: 0.5rem;
     border-bottom: 5px $tertiary-color solid;
+  }
+
+  .ioi-title {
+    font-family: "Times New Roman", Times, serif;
   }
 }
 
