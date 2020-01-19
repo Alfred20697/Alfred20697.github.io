@@ -168,7 +168,8 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio";
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px; }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
