@@ -55,7 +55,13 @@
   .about-info {
     grid-template-areas:
       "bioimage"
-      "bio"
+      "bio";
+
+    grid-template-columns: 1fr;
+  }
+
+  .job-info {
+    grid-template-areas:
       "job1"
       "job2"
       "job3";
